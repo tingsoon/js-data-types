@@ -18,56 +18,56 @@ What is the output of each of the expressions below?
 
 ```js
 typeof(15)
-// Prediction:
+// Prediction: value
 // Actual:
 
 typeof(5.5)
-// Prediction:
+// Prediction: value
 // Actual:
 
 typeof(NaN)
-// Prediction:
+// Prediction:number
 // Actual:
 
 typeof("hello")
-// Prediction:
+// Prediction:string
 // Actual:
 
 typeof(true)
-// Prediction:
+// Prediction:boolean
 // Actual:
 
 typeof(1 != 2)
-// Prediction:
+// Prediction:boolean
 // Actual:
 
 
 "hamburger" + "s"
-// Prediction:
+// Prediction: hamburgers
 // Actual:
 
 "hamburgers" - "s"
-// Prediction:
+// Prediction: NaN
 // Actual:
 
 "1" + "3"
-// Prediction:
+// Prediction: 13
 // Actual:
 
 "1" - "3"
-// Prediction:
+// Prediction: -2
 // Actual:
 
 "johnny" + 5
-// Prediction:
+// Prediction: johnny5
 // Actual:
 
 "johnny" - 5
-// Prediction:
+// Prediction: NaN
 // Actual:
 
 99 * "luftbaloons"
-// Prediction:
+// Prediction: NaN
 // Actual:
 ```
 
@@ -103,7 +103,9 @@ numbers.unshift(3)
 ```
 
 ```text
-Your answer goes here.
+[2, 4, 6]
+[2, 4, 6, 8, 10]
+[3, 2, 4, 6, 8]
 ```
 
 What is the return value of the below code sample? Come up with an answer yourself before testing it out in the console.
@@ -115,7 +117,7 @@ moreMorse.split(" ")
 ```
 
 ```text
-Your answer goes here.
+["dot", "dash", "pause", "dash", "dot"]
 ```
 
 What will the contents of the below array be after the below code sample is executed? Come up with an answer yourself before testing it out in the console.
@@ -132,7 +134,8 @@ bands[1][3] = "Ringo"
 ```
 
 ```text
-Your answer goes here.
+["Mick", "Keith", "Ronnie", "Charlie"] 
+["Paul", "John", "George", "Ringo"]
 ```
 
 ## Booleans & Comparison Operators
@@ -152,30 +155,30 @@ Fill out the truth tables below for `&&` (and), `||` (or) and one that uses mult
 
 | a | b | a AND b |
 | --- | --- | --- |
-| true | true | ? |
-| true | false | ? |
-| false | true | ? |
-| false | false | ? |
+| true | true | true |
+| true | false | false |
+| false | true | false |
+| false | false | false |
 
 |a|b|a OR b|
 |---|---|---|
-|true|true|?|
-|true|false|?|
-|false|true|?|
-|false|false|?|
+|true|true|true|
+|true|false|true|
+|false|true|true|
+|false|false|false|
 
 |a|b|a `!=` b|
 |---|---|---|
-|3|3|?|
-|1|5|?|
-|2|"2"|?|
+|3|3|false|
+|1|5|true|
+|2|"2"|false|
 
 |a|b|!a AND (a OR b)|
 |---|---|---|
-|true|true|?|
-|true|false|?|
-|false|true|?|
-|false|false|?|
+|true|true|false|
+|true|false|false|
+|false|true|true|
+|false|false|false|
 
 ## Conditionals
 
@@ -186,7 +189,24 @@ You're a bouncer at a bar. Given an `age` variable, create a conditional that sa
 * If a patron is older than 75, print out `"Are you sure you want to be here?"`.
 
 ```js
-// Your answer goes here.
+var ID = true;
+
+var age = 18;
+
+if (ID === true) {
+	if (age >= 21 && age <= 74) {
+	console.log ("Come on in!");
+} else if ( age >= 18 && age <= 20) {
+	console.log ("Come on in (but no drinking)!");
+} else if ( age <= 17) {
+	console.log ("You're too young to be in here!");
+} else if ( age >= 75 ) {
+	console.log ("Are you sure you want to be in here?");
+}
+}
+else {
+ 	console.log ("No ID, No Entry!")
+ }
 ```
 
 #### Bonus
